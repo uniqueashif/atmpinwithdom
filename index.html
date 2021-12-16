@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="col-lg-4 m-auto">
+        <h2 class="bg-primary text-center text-white py-2 m-0">Please Enter User Name </h2>
+        <div class="mb-2">
+            <input type="text" id="username" placeholder="username" class="form-control">
+        </div>
+
+        <input type="submit" id="btn" class="btn btn-success">
+    </div>
+    <script>
+        document.getElementById('btn').onclick = function() {
+            var user = document.getElementById('username').value
+            if (user == "ashif") {
+                window.open("pass.html", "_self")
+            } else {
+                document.write("please enter valid user name");
+            }
+        }
+    </script>
+</body>
+
+</html>

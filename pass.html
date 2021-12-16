@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="col-lg-4 m-auto">
+        <h2 class="bg-primary text-center text-white py-2 m-0">Please Enter Pin </h2>
+        <div id="div">
+            <div class="mb-2">
+                <input type="text" id="pass" placeholder="4 Digit pin" class="form-control">
+            </div>
+            <input type="submit" id="btn" class="btn btn-success">
+            <div id="msg"></div>
+        </div>
+    </div>
+
+    <script>
+        var d = document.getElementById('div').innerHTML
+        count = 1;
+
+        function pass() {
+            if (count < 4) {
+                document.getElementById('btn').onclick = function p() {
+                    passcode = 9000
+                    var inpass = document.getElementById('pass').value;
+                    if (passcode == inpass) {
+                        window.open("withdraw.html", "_self")
+                    } else {
+                        // alert('wrong pass' + count + " time")
+                        document.getElementById('div').innerHTML = d;
+                        document.getElementById('msg').innerHTML = count + " time Wrong Pin"
+                        count++
+                        pass();
+                    }
+
+                }
+            } else {
+                document.getElementById('div').innerHTML = "Your Pin Limit Has been Exceed Please Try After 24 Hours"
+            }
+        }
+        pass();
+    </script>
+</body>
+
+</html>

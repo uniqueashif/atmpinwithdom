@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="col-lg-4 m-auto">
+        <h2 class="bg-primary text-center text-white py-2 m-0">Please Enter Pin </h2>
+        <div class="mb-2">
+            <input type="text" placeholder="withdraw ammount" id="wd" class="form-control">
+        </div>
+        <button id="btn" class="btn btn-success">Withdraw</button>
+    </div>
+    <script>
+        var camount = 100000;
+        document.getElementById('btn').onclick = function() {
+            var damount = parseInt(document.getElementById('wd').value)
+            if (camount > damount) {
+                var f = camount - damount;
+                document.write(`Your Widthdraw ammout is ${damount}<br> your remaining balance is ${f}`);
+
+            } else {
+                document.write("Insufficient Fund");
+            }
+        }
+    </script>
+</body>
+
+</html>

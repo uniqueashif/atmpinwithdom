@@ -1,0 +1,8 @@
+#msg,
+#div {
+    color: red
+}
+
+input:focus {
+    box-shadow: none !important;
+}
